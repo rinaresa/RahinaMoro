@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aframe</title>
+    <script src="Script/aframe.js"></script>
+</head>
+<body>
+    <a-scene shadow="type:pcfsoft">
+        <a-assets>
+            <img src="textures/floor-1024.jpg" id="floor1" alt="">
+            <img src="textures/Bordo_Zolla_01_Mat_baseColor.jpg" id="floor" alt="">
+            <img src="textures/360/Sky Background-56.jpg" id="sky1" alt="">
+            <img src="textures/floor-1024-2.jpg" id="brick" alt="">
+            <img src="textures/TexturesCom_MetalPlatesNew0014_1_seamless_S.jpg" id="metal" alt="">
+            <img src="textures/TexturesCom_FloorsCheckerboard0034_1_M.jpg" id="check" alt="">
+            <img src="textures/wood.png" id="wd" alt="">
+            <img src="textures/50g pack.png" id="milo" alt="">
+            <img src="textures/milk.png" id="milk" alt="">
+           <img src="textures/photo-ground-texture-pattern.jpg" id="road" alt="">
+           
+            
+        </a-assets>
+
+        <a-plane material=";
+                            src:#floor;
+                            repeat:1000 10000;
+                            normal-map:#floor1;
+                            normal-texture-repeat:1000 1000"
+                            scale="10000 10000 30"
+                            rotation="-90 0 0"
+                            shader="standard"
+                            shadow="receive:true">
+
+        </a-plane>
+        <a-sky src="#sky1" 
+        
+        rotation="2 -3 0"
+        
+        >
+
+        </a-sky>
+
+ 
+      
+      <!-- Table -->
+      <a-box position="0 2 0" width="2" depth="1" height="0.1" color="brown"></a-box>
+      <!-- Table Legs -->
+      <a-cylinder position="-0.9 0.5 0.4" radius="0.05" height="3" color="brown"></a-cylinder>
+      <a-cylinder position="0.9 0.5 0.4" radius="0.05" height="3" color="brown"></a-cylinder>
+      <a-cylinder position="-0.9 0.5 -0.4" radius="0.05" height="3" color="brown"></a-cylinder>
+      <a-cylinder position="0.9 0.5 -0.4" radius="0.05" height="3" color="brown"></a-cylinder>
+      
+      <!-- Chairs -->
+      <a-box position="-1.5 0.5 0" width="0.5" depth="0.5" height="2" color="brown"></a-box>
+      <a-box position="1.5 0.5 0" width="0.5" depth="0.5" height="2" color="brown"></a-box>
+      <!-- Chair Legs -->
+      <a-cylinder position="-1.65 0.25 0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="-1.35 0.25 0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="-1.65 0.25 -0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="-1.35 0.25 -0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="1.65 0.25 0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="1.35 0.25 0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="1.65 0.25 -0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+      <a-cylinder position="1.35 0.25 -0.2" radius="0.05" height="0.5" color="brown"></a-cylinder>
+
+      <!-- Cups -->
+      <a-cylinder position="-0.7 2.2 0.4" radius="0.1" height="0.2" color="white"></a-cylinder>
+      <a-cylinder position="0.7 2.2 0.4" radius="0.1" height="0.2" color="white"></a-cylinder>
+      
+     
+
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="7 4.5 0"></a-cylinder>
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="4 4.5 5.4"></a-cylinder>
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="-4 4.5 5.4"></a-cylinder>
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="-7 4.5 0"></a-cylinder>
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="0 4.5 -7.4"></a-cylinder>
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="1.9 4.3 6.7"></a-cylinder>
+        <a-cylinder color="white" height="4" width="0.1" radius="0.05" position="-1.9 4.3 6.7"></a-cylinder>
+        
+
+        <a-cone color="" scale="8 8 8" position="0 9.3 0" side="double" open-ended="True" src="#metal" repeat="5 5" roughnes="2" shader="standard" shadow="cast:true;receive:true"></a-cone>
+        <a-plane color=" " scale="80 25 50" position="-1 0 -17" src="#brick" repeat="5 5" roughness="2" side="double"  shader="standard"></a-plane>
+        <a-plane color=" " scale="40 25 50" position="39 0 3" src="#brick" repeat="5 5" roughness="2"  shader="standard" side="double" rotation="0 -90 0"></a-plane>
+        <a-plane color=" " scale="40 25 50" position="-41 0 3" src="#brick" repeat="5 5" roughness="2"  shader="standard" side="double" rotation="0 -90 0"></a-plane> 
+       <a-plane color=" " scale="21  25 50" position="-31 0 23" src="#brick" repeat="5 5" roughness="2" side="double"  shader="standard"></a-plane>
+        <a-plane color=" " scale="19 25 41" position="30 0 23" src="#brick" repeat="5 5" roughness="2" side="double"  shader="standard"></a-plane>
+         <a-entity gltf-model="#chair" scale="0.1 0.1 0.1" position="-2.8 0.6 3"></a-entity>
+        <a-plane  scale="4 47 2" rotation="-90 0 0" position="0 0 17" side="double" src="#road" repeat="2 2"></a-plane>
+
+        
+        <a-entity position="0 2 18">
+<a-camera  user-height="1.6"
+rotation="0 180 90"
+active="True"></a-camera>
+
+        </a-entity>
+
+        <a-cylinder radius="8.5" height="0.05" side="double" color="#c7b2b8"> </a-cylinder>
+
+        <a-cylinder radius="7.6" height="1.2" side="double" color="#faf3e0"></a-cylinder>
+
+        <a-cylinder src="#check"  repeat="2 2"  color="#f5f5dc" radius="7" height="6" side="double" open-ended="true" theta-length="330" rotation="0 15 0" shader="standard" shadow="cast:true;receive:true" >
+    
+        <a-cylinder  src="#check"  repeat="0.5 0.5" color="#fff5e1" radius="7" height="1.4" side="double" open-ended="true" position="0 5.5 0" >
+    
+        </a-cylinder>
+
+        <!--
+        <a-box height="4" width="0.1" depth="0.1" position="-1.5 0 0" src="#wd" repeat="2 2 0"></a-box>
+        <a-box height="4" width="0.1" depth="0.1" position="-1.5 0 2" src="#wd" repeat="2 2 0"></a-box>
+        
+        <a-box height="4" width="0.1" depth="0.1" position="1.5 0 0" src="#wd" repeat="2 2 0"></a-box>
+        <a-box height="4" width="0.1" depth="0.1" position="1.5 0 2" src="#wd" repeat="2 2 0"></a-box>
+
+        <a-box height="0.1" width="4" depth="3" position="0 2 1" src="#wd" repeat="2 2 0"></a-box>
+        -->
+
+       
+        <a-cylinder radius="0.2" height="0.6"  position="0.21 2.2 0.2" src="#milo" repeat="1 1 2" rotation="0 150 0"></a-cylinder>
+        <a-cylinder radius="0.17" height="0.57"  position="-0.21 2.2 0.2" src="#milk" repeat="1 1 2" rotation="0 150 0"></a-cylinder>
+        <a-cylinder radius="0.2" height="0.01"  position="0.21 2.2 0.2"  src="#metal" color="#647e4f" repeat="10 20 10"></a-cylinder>
+        <a-cylinder radius="0.17" height="0.01"  position="-0.21 2.2 0.2"  src="#metal" color="#430808" repeat="10 20 10"></a-cylinder>
+
+
+    </a-scene>
+    
+    
+</body>
+</html>
